@@ -1,22 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="">
+	<title>Shopping Cart</title>
+	<link rel="stylesheet" type="text/css" href="shoppingCart2.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
 <body>
+	<div style="text-align:center">
+		<h2 id="one">Spectacular School Supplies</h2>
+		<p>Click on an item for more info</p>
+		<p>View Cart Below</p>
+	</div>
 
-<h1>Welcome to The School Supply Store</h1>
+	<div class="row">
+		<div class="column" onclick="openTab('b1');" style="background:#e3e8ef;">
+			Pencils
+		</div>
+		<div class="column" onclick="openTab('b2');" style="background:#e3e8ef;">
+			Note Book
+		</div>
+		<div class="column" onclick="openTab('b3');" style="background:#e3e8ef;">
+			Highlighters
+		</div>
+	</div>
 
-<p>Our Most Popular Items</p>
+	<div id="b1" class="containerTab" style="display:none;background:white">
+		<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+		<p id="pencils1"><img src="https://target.scene7.com/is/image/Target/13300045_Alt01?wid=488&hei=488&fmt=pjpeg" height="150px" width="200px"></p>
+		<h2>Pencils</h2>
+		<p>These are the BEST Pencils in the World!</p>
+		<p>Price: $3.99</p>
+		<button id="btn"><a class="add-to-cart" href="#" data-name="Pencils" data-price="3.99">Add To Cart</a></button>
+	</div>
 
-<p id="showArray"></p>
+	<div id="b2" class="containerTab" style="display:none;background:white">
+		<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+		<p id="pencils1"><img src="https://images-na.ssl-images-amazon.com/images/I/713mUsGK9ML._SL1500_.jpg" height="200px" width="250px"></p>
+		<h2>Note Books</h2>
+		<p>These are the BEST Note Books in the World!</p>
+		<p>Price: $4.99</p>
+		<button id="btn"><a class="add-to-cart" href="#" data-name="Note Books" data-price="4.99">Add To Cart</a></button>
+	</div>
 
-<script type="text/javascript">
-	var schoolSupplies = ["Pencils", "Erasers", "Notebooks", "Pens", "Folders", "Sharpeners"];
-	document.getElementById("showArray").innerHTML = schoolSupplies;
+	<div id="b3" class="containerTab" style="display:none;background:white">
+		<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+		<p id="pencils1"><img src="https://officedepot.scene7.com/is/image/officedepot/755290_p?$OD%2DLarge$&wid=450&hei=450" height="200px" width="250px"></p>
+		<h2>Highlighters</h2>
+		<p>These are the BEST Highlighters in the World!</p>
+		<p>Price: $7.99</p>
+		<button id="btn"><a class="add-to-cart" href="#" data-name="Highlighters" data-price="7.99">Add To Cart</a></button>
+	</div>
 
-</script>
+	<br>
+
+    <div class="row">
+      <div class="column" onclick="openTab('b4');" style="background:#e3e8ef;">
+         Note Cards
+     </div>
+     <div class="column" onclick="openTab('b5');" style="background:#e3e8ef;">
+         Binder
+     </div>
+     <div class="column" onclick="openTab('b6');" style="background:#e3e8ef;">
+         Paper
+     </div>
+ </div>
+
+ <div id="b4" class="containerTab" style="display:none;background:white">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <p id="pencils1"><img src="https://images-na.ssl-images-amazon.com/images/G/01/aplus/detail-page/sc_b0010xuo52-02recipe.jpg" height="150px" width="200px"></p>
+  <h2>Note Cards</h2>
+  <p>These are the BEST Note Cards in the World!</p>
+  <p>Price: $2.99</p>
+  <button id="btn"><a class="add-to-cart" href="#" data-name="Note Cards" data-price="2.99">Add To Cart</a></button>
+</div>
+
+<div id="b5" class="containerTab" style="display:none;background:white">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <p id="pencils1"><img src="http://www.springbackbinders.com/wp-content/uploads/2015/03/candy-25mm-group.jpg" height="150px" width="200px"></p>
+  <h2>Binders</h2>
+  <p>These are the BEST Binders in the World!</p>
+  <p>Price: $5.99</p>
+  <button id="btn"><a class="add-to-cart" href="#" data-name="Binders" data-price="5.99">Add To Cart</a></button>
+</div>
+
+<div id="b6" class="containerTab" style="display:none;background:white">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <p id="pencils1"><img src="https://images-na.ssl-images-amazon.com/images/I/717WK3rCyOL._SX425_.jpg" height="200px" width="200px"></p>
+  <h2>Paper</h2>
+  <p>These are the BEST Paper in the World!</p>
+  <p>Price: $8.99</p>
+  <button id="btn"><a class="add-to-cart" href="#" data-name="Paper" data-price="8.99">Add To Cart</a></button>
+</div>
+<br>
+
+<div class="row">
+  <div class="column" onclick="openTab('b7');" style="background:#e3e8ef;">
+     Pens
+ </div>
+ <div class="column" onclick="openTab('b8');" style="background:#e3e8ef;">
+     Erasers
+ </div>
+ <div class="column" onclick="openTab('b9');" style="background:#e3e8ef;">
+     Sharpener
+ </div>
+</div>
+
+<div id="b7" class="containerTab" style="display:none;background:white">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <p id="pencils1"><img src="https://target.scene7.com/is/image/Target/50358888?wid=488&hei=488&fmt=pjpeg" height="220px" width="200px"></p>
+  <h2>Pens</h2>
+  <p>These are the BEST Pens in the World!</p>
+  <p>Price: $9.99</p>
+  <button id="btn"><a class="add-to-cart" href="#" data-name="Pens" data-price="9.99">Add To Cart</a></button>
+</div>
+
+<div id="b8" class="containerTab" style="display:none;background:white">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <p id="pencils1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Office-pink-erasers.jpg/1200px-Office-pink-erasers.jpg" height="250px" width="250px"></p>
+  <h2>Erasers</h2>
+  <p>These are the BEST Erasers in the World!</p>
+  <p>Price: $.99</p>
+  <button id="btn"><a class="add-to-cart" href="#" data-name="Erasers" data-price=".99">Add To Cart</a></button>
+</div>
+
+<div id="b9" class="containerTab" style="display:none;background:white">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <p id="pencils1"><img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTiuFYGr-0cmtKc8dR4rgj6pyb8UD0J9mkQ3n3zi9pGw0qcOHV9LnNqMjGlP5Z7GMoBgOGx9I5H&usqp=CAY" height="300px" width="275px"></p>
+  <h2>Sharpener</h2>
+  <p>These are the BEST Sharpeners in the World!</p>
+  <p>Price: $10.99</p>
+  <button id="btn"><a class="add-to-cart" href="#" data-name="Sharpener" data-price="10.99"> Add To Cart</a></button>
+</div>
+
+<div>
+    <h2>Total Cart</h2>
+</div>
+<div>
+    <ul id="show-cart"></ul>
+    <div id="p1">You have <span id="count-cart">X</span> items in your cart</div>
+    <br>
+    <div id="p1">Total Cart:$<span id="total-cart"></span></div>
+</div>
+<br>
+<button id="clear-cart">Clear Cart</button>
+<br>
+<button id="checkout">Check Out</button>
+
+<script src="ShoppingCart3.js"></script>
 
 </body>
 </html>
